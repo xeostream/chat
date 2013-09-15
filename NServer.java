@@ -38,6 +38,7 @@ public class NServer {
 						while (sc.read(buff) > 0) {
 							buff.flip();
 							content += charset.decode(buff);
+							buff.clear();
 						}
 						System.out.println("=====" + content);
 						key.interestOps(SelectionKey.OP_READ);
