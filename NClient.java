@@ -42,6 +42,7 @@ public class NClient {
 								sc.read(buff);
 								buff.flip();
 								content += charset.decode(buff);
+								buff.clear();
 							}
 							System.out.println("chat info: " + content);;
 							sk.interestOps(SelectionKey.OP_READ);;
