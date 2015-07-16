@@ -1,4 +1,4 @@
-package com.trendmicro.arthur.nio;
+package com.trendmicro.arthur.nio.client;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -9,6 +9,10 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
+/**
+ * 客户端
+ * @author arthur
+ */
 public class NClient {
 	private Selector selector;
 	private Charset charset = Charset.forName("UTF-8");
@@ -44,8 +48,8 @@ public class NClient {
 								content += charset.decode(buff);
 								buff.clear();
 							}
-							System.out.println("chat info: " + content);;
-							sk.interestOps(SelectionKey.OP_READ);;
+							System.out.println("chat info: " + content);
+							sk.interestOps(SelectionKey.OP_READ);
 						}
 					}
 				}

@@ -1,4 +1,4 @@
-package com.trendmicro.arthur.nio;
+package com.trendmicro.arthur.nio.server;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -10,6 +10,10 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 
+/**
+ * 服务器端
+ * @author arthur
+ */
 public class NServer {
 	private Selector selector;
 	private Charset charset = Charset.forName("UTF-8");
