@@ -53,9 +53,9 @@ public class NServer {
 					}
 					if (content.length() > 0) {
 						for (SelectionKey sk : selector.keys()) {
-							Channel targetchannel = sk.channel();
-							if (targetchannel instanceof SocketChannel) {
-								SocketChannel dest = (SocketChannel)targetchannel;
+							Channel targetChannel = sk.channel();
+							if (targetChannel instanceof SocketChannel) {
+								SocketChannel dest = (SocketChannel)targetChannel;
 								dest.write(charset.encode(content));
 							}
 						}
