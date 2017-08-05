@@ -59,6 +59,9 @@ public class NServer {
 								dest.write(charset.encode(content));
 							}
 						}
+					} else {
+						sc.close();
+						key.cancel();
 					}
 				}
 			}
